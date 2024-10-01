@@ -16,7 +16,7 @@ public class Constants {
   public static final String kArmPKey = "ArmP";
 
   // The P gain for the PID controller that drives this arm.
-  public static final double kDefaultArmKp = 50.0;
+  public static final double kDefaultArmKp = 10.0;
   public static final double kDefaultArmSetpointDegrees = 75.0;
 
   // distance per pulse = (angle per revolution) / (pulses per revolution)
@@ -28,4 +28,7 @@ public class Constants {
   public static final double kArmLength = Units.inchesToMeters(30);
   public static final double kMinAngleRads = Units.degreesToRadians(-75);
   public static final double kMaxAngleRads = Units.degreesToRadians(255);
+
+  public static final double ARM_RAD_PER_ENCODER_ROTATION = 2.0 * Math.PI / kArmReduction;
+  public static final double RPM_TO_RAD_PER_SEC = ARM_RAD_PER_ENCODER_ROTATION / 60;
 }
