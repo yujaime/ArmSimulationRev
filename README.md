@@ -1,1 +1,1 @@
-### WPLILib ArmSimulation example modified to use Rev SparkMax and SimDeviceSim
+### WPILib ArmSimulation example modified to use Rev SparkMax and SimDeviceSim
