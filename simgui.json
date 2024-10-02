@@ -12,6 +12,13 @@
       }
     }
   },
+  "NetworkTables": {
+    "persistent": {
+      "Preferences": {
+        "open": true
+      }
+    }
+  },
   "NetworkTables Info": {
     "visible": true
   }
