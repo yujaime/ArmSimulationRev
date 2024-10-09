@@ -28,13 +28,14 @@ import edu.wpi.first.wpilibj.util.Color8Bit;
 public class Arm implements AutoCloseable {
   // The P gain for the PID controller that drives this arm.
   private double m_armKp = Constants.kDefaultArmKp;
+  private double m_armKd = Constants.kDefaultArmKd;
   private double m_armSetpointDegrees = Constants.kDefaultArmSetpointDegrees;
 
   // The arm gearbox represents a gearbox containing two Vex 775pro motors.
   private final DCMotor m_armGearbox = DCMotor.getVex775Pro(2);
 
   // Standard classes for controlling our arm
-  private final PIDController m_controller = new PIDController(m_armKp, 0, 0);
+  private final PIDController m_controller = new PIDController(m_armKp, 0, m_armKd);
 
   CANSparkMax m_motor = new CANSparkMax(Constants.kMotorPort, MotorType.kBrushless);
   RelativeEncoder m_encoder = m_motor.getEncoder();

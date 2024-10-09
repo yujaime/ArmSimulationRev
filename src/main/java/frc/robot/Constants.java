@@ -17,7 +17,8 @@ public class Constants {
 
   // The P gain for the PID controller that drives this arm.
   public static final double kDefaultArmKp = 10.0;
-  public static final double kDefaultArmSetpointDegrees = 100.0;
+  public static final double kDefaultArmKd = 10.0;
+  public static final double kDefaultArmSetpointDegrees = 70.0;
 
   // distance per pulse = (angle per revolution) / (pulses per revolution)
   //  = (2 * PI rads) / (4096 pulses)
